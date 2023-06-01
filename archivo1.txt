@@ -1,0 +1,55 @@
+\subsubsection{Fundamentals of Monte Carlo simulation}
+Yauri (2012) established that, to implement the Monte Carlo Simulation in its pure state, which is based on the generation of random numbers, the following steps must be followed. 
+\begin{itemize}
+    \item Determine random variables and their distributions. 
+    \item Iterate as many times as necessary:
+    \begin{itemize}
+        \item Generate a random number.
+        \item Uniform [0,1]
+        \item Determine the value for the random number generated according to the range or classes that are specified. 
+    \end{itemize}
+    \item Calculate mean, standard deviation, or comparable statistical methods.
+    \item Analyze the results. 
+\end{itemize}
+
+Another option to work with Monte Carlo would be when the random variable is not directly the result of the simulation or when there are relationships between the variables. So the general steps that must be followed are the following:
+
+\begin{itemize}
+    \item Desing the decision logic model.
+    \item Specify probability distributions for the relevant random variables. 
+    \item Include possible dependencies between variables.
+    \item Calculate the result of the model according to sampling values (iteration) and record the result. 
+    \item Repeat the process until you have a statistically representative sample. 
+    \item Calculate mean or standard deviation. 
+    \item Analyze the results.
+\end{itemize}
+
+Taking these two approaches into account, it can be said that there are basic concepts or terminologies that must be considered when applying the Monte Carlo simulation. As well as a methodology that is typically performed when Monte Carlo simulation is applied, these are mentioned below \cite{FactorHman}.
+
+\subsubsection{Terminologies}
+There are terms that are used in the context of Monte Carlo simulation and some are mentioned below. 
+
+\textbf{Statistical distributions} Statistical distributions or probability distributions describe the outcomes. When the random variable takes only discrete values, the corresponding probability distributions are called discrete probability distributions. Example this kind are the binomial distribution, Poisson distribution, and hypergeometric distribution. On the other hand, when the random variable takes continuous values, the corresponding probability distributions are called continuous probability distributions. Examples of this kind are normal, exponential, and gamma distributions. 
+
+\textbf{Random sampling} In statistics, a finite subset of individuals from a population is called a sample. In random sampling, the samples are drawn at random from the population, which implies that each unit of population has an equal chance of being included in the sample.
+
+\textbf{Random number generator (RNG)} A random number generator is a computational or physical device designed to generate a sequence of numbers that appear to be independent draws from a population, and that also pass a series of statistical tests. They are also called Pseudo-random number generators, since the random numbers generated through this method are not actual, but simulated. 
+
+\subsubsection{Methodology}
+The following steps are typically performed for the Monte Carlo simulation of a physical process.
+
+\textbf{Static Model Generation} Every Monte Carlo simulation begins with the development of a deterministic model that closely resembles the actual scenario. In this deterministic model, the most likely value (or base case) of the input parameters is used. Mathematical relationships are applied that take the values of the input variables and transform them into the desired output. 
+
+\textbf{Input Distribution Identification} When a good deterministic model is obtained, the risk components are added to the model. Since the risks arise from the stochastic nature of the input variables, it is a question of identifying the underlying distributions, if any, that govern the input variables. This step needs historical data for the input variables.
+
+\textbf{Generation of random variables} After the underlying distributions for the input variables have been identified, a set of random numbers (also called random variables or random samples) is generated from these distributions. In the deterministic model, a set of random numbers, consisting of one value for each of the input variables, will be used to provide a set of output values.  This process is then repeated generating more sets of random numbers, one for each input distribution, and different sets of possible output values are collected. This part is the core of the Monte Carlo simulation. 
+
+\textbf{Analysis and Decision Making} After you have collected a sample of the simulation output values, a statistical analysis of those values is performed. This step provides statistical confidence for decisions that might be made after running the simulation.\cite{MonteC.}
+
+-----------------------------------------------
+
+It's a numerical simulation technique used to generate random variables and evaluate uncertainty in complex systems in different fields of science. It is used in different fields, such as project management, engineering, research and development, etc.
+
+The basic concept of this method is based on probability, since it proposes knowing the probability of occurrence of an event, which is obtained by performing the experiment a sufficient number of times and determining the dependent random variable as a density function of the results obtained in the "experiments" carried out. Monte Carlo simulation provides, with modeling, the answer of possible outcomes by substituting a range of values (represented by a probability distribution) for any factor with uncertainty. It then calculates the results over and over again, each time using a different set of random values of the probability functions. Thousands or tens of thousands of recalculations may be required to complete a Monte Carlo simulation, depending on the amount of uncertainty and the specified ranges.
+
+By using this tool the effect of the human factor can be introduced. So to understand the operation of this tool and the way in which the different factors have been introduced, the fundamentals of it are explained below. 

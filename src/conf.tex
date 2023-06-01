@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Configuraciones adicionales %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+
+%% Algpseudocodex restyling %%
+\renewcommand{\algpx@commentFormat}[1]{%
+	\ifbool{algpx@italicComments}{%
+		\textsl{\textcolor{\algpx@commentColor}{#1}}%
+	}{%
+		\textcolor{\algpx@commentColor}{#1}%
+	}%
+}
+
+%% myalg extra commands %%
+
+%% myalg environment %%
+\newenvironment{myalg}{%algorithm
+    \begin{minipage}{0.95\columnwidth}
+    \newcommand{\Var}[1]{\texttt{##1}}
+    \selectlanguage{english}
+    \hrule width \textwidth\relax\vskip .75em\relax
+    \begin{algorithmic}%
+}{%
+    \end{algorithmic}
+    \vskip .75em\relax\hrule width \textwidth\relax
+    \end{minipage}%
+}
+
+%% Float new environments %%
+\newfloat{algorithm}{tbp}{loa}
+\floatname{algorithm}{Algorithm}
+
+\makeatother
+\endinput

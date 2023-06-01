@@ -1,0 +1,22 @@
+
+
+1. Introducción - Introducir algunos problemas y como el modelo de Ising puede ser una buena manera de solucionarlos. Podrían basarse/mover la sección 2.1 para que sea la sección 1.
+
+2. Descripción del Modelo - Modificar la descripción actual para que sea más concisa
+
+3. Simulación de Montecarlo - Hacerla más breve.
+
+
+
+Condiciones usadas:
+Limitaciones que está tomando el proyecto
+Condiciones usadas: cuadrícula, los límites son toroidales, la configuración inicial de +1 y -1 es 50-50, la cuadrícula inicial es diferente para cada simulación
+
+Lenguaje de programación
+Python. Fácil de escribir, leer. Numpy y Scipy lo hacen muy rápido. Aproximadamente igual a C++.
+
+Cómo correr el programa
+Con Jupyter, uno puede ejecutar todo
+
+Salidas:
+Imagenes. Podemos considerar los datos de la Energía promedio, momento magnético promedio y sus respectivas gráficas como salidas también.
